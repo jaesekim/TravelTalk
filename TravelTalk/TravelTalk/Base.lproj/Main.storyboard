@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hPp-DU-aza">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat List View Controller-->
+        <scene sceneID="UJk-3v-fgn">
+            <objects>
+                <viewController storyboardIdentifier="ChatListViewController" id="BZz-I7-mC2" customClass="ChatListViewController" customModule="TravelTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LkL-8K-fTg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qSb-Gz-MSg">
+                                <rect key="frame" x="4" y="155" width="385" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cTd-PW-EtA">
+                                <rect key="frame" x="0.0" y="103" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="f79-6M-zb9"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BZz-I7-mC2" id="AL7-9c-bkv"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fY6-ib-Mdr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cTd-PW-EtA" firstAttribute="top" secondItem="fY6-ib-Mdr" secondAttribute="top" id="2Cj-rd-eTz"/>
+                            <constraint firstItem="cTd-PW-EtA" firstAttribute="leading" secondItem="fY6-ib-Mdr" secondAttribute="leading" id="EA9-7T-GjR"/>
+                            <constraint firstItem="cTd-PW-EtA" firstAttribute="trailing" secondItem="fY6-ib-Mdr" secondAttribute="trailing" id="Q6c-ae-Uyx"/>
+                            <constraint firstItem="fY6-ib-Mdr" firstAttribute="bottom" secondItem="qSb-Gz-MSg" secondAttribute="bottom" id="Sv5-n6-91l"/>
+                            <constraint firstItem="fY6-ib-Mdr" firstAttribute="trailing" secondItem="qSb-Gz-MSg" secondAttribute="trailing" constant="4" id="UUs-MX-EM1"/>
+                            <constraint firstItem="qSb-Gz-MSg" firstAttribute="leading" secondItem="fY6-ib-Mdr" secondAttribute="leading" constant="4" id="qRl-qX-NdU"/>
+                            <constraint firstItem="qSb-Gz-MSg" firstAttribute="top" secondItem="cTd-PW-EtA" secondAttribute="bottom" constant="8" id="rUS-hN-nWY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DsD-js-zbf"/>
+                    <connections>
+                        <outlet property="chatTableView" destination="qSb-Gz-MSg" id="wNj-Iy-tIv"/>
+                        <outlet property="searchBar" destination="cTd-PW-EtA" id="30F-Va-UhK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khN-0n-T15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="-18"/>
+        </scene>
+        <!--Chat Detail List View Controller-->
+        <scene sceneID="XdT-ZO-BC6">
+            <objects>
+                <viewController storyboardIdentifier="ChatDetailListViewController" id="tcd-jW-Ler" customClass="ChatDetailListViewController" customModule="TravelTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ely-3w-XCQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NNH-hz-0yI">
+                                <rect key="frame" x="4" y="67" width="385" height="691"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZS7-8x-gpo">
+                                <rect key="frame" x="0.0" y="766" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zqG-xr-wzM"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tcd-jW-Ler" id="V7O-xf-Bam"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yVx-Vt-hGM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yVx-Vt-hGM" firstAttribute="trailing" secondItem="NNH-hz-0yI" secondAttribute="trailing" constant="4" id="F9s-l2-Zn8"/>
+                            <constraint firstItem="ZS7-8x-gpo" firstAttribute="top" secondItem="NNH-hz-0yI" secondAttribute="bottom" constant="8" id="NAo-do-fqQ"/>
+                            <constraint firstItem="yVx-Vt-hGM" firstAttribute="bottom" secondItem="ZS7-8x-gpo" secondAttribute="bottom" constant="8" id="ZmQ-JB-1FQ"/>
+                            <constraint firstItem="ZS7-8x-gpo" firstAttribute="leading" secondItem="yVx-Vt-hGM" secondAttribute="leading" id="cnc-UJ-AjC"/>
+                            <constraint firstItem="NNH-hz-0yI" firstAttribute="leading" secondItem="yVx-Vt-hGM" secondAttribute="leading" constant="4" id="ff4-W4-xCB"/>
+                            <constraint firstItem="NNH-hz-0yI" firstAttribute="top" secondItem="yVx-Vt-hGM" secondAttribute="top" constant="8" id="gNg-oh-JKK"/>
+                            <constraint firstItem="ZS7-8x-gpo" firstAttribute="trailing" secondItem="yVx-Vt-hGM" secondAttribute="trailing" id="o7K-Qk-f0b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatTableView" destination="NNH-hz-0yI" id="zMe-gk-n49"/>
+                        <outlet property="searchBar" destination="ZS7-8x-gpo" id="qaa-Ym-JX8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TgN-Q6-Dsg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="-18"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uqj-yD-Lk1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hPp-DU-aza" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qvl-Rn-dOv">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BZz-I7-mC2" kind="relationship" relationship="rootViewController" id="4PB-qN-cYE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Evn-vM-YrL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-342.74809160305341" y="-18.30985915492958"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
